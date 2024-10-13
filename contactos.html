@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="icon" href="img/11.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Estilo para centrar el formulario y darle estilo */
+/* Reset básico para asegurar un estilo consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Fondo suave para la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la ventana */
+}
+
+/* Estilo para el contenedor del formulario */
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    animation: fadeIn 1.2s ease-out;
+}
+
+/* Estilo para el formulario */
+form {
+    width: 100%;
+}
+
+/* Estilo para el título del formulario */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+/* Estilo para las etiquetas */
+form label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Estilo para los campos de texto y textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Enfocar el campo con un borde verde */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #3FB73F;
+    outline: none;
+    box-shadow: 0 0 6px rgba(63, 183, 63, 0.5);
+}
+
+/* Estilo para el botón */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3FB73F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Animación al hacer hover sobre el botón */
+form button:hover {
+    background-color: #37A636;
+    transform: translateY(-3px);
+}
+
+/* Efecto clic en el botón */
+form button:active {
+    transform: translateY(0px);
+}
+
+/* Animaciones para la entrada del formulario */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+</style>
+<body>
+
+    <div id ="wrapper">
+        <form action="https://formsubmit.co/franciscojvillanueva21@gmail.com " method="POST" />
+            <h2>Envía tu formulario</h2>
+            
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo" required>
+
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+
+            <label for="comments">Comentarios</label>
+            <textarea id="comments" name="comments" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/contactos.html">
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
