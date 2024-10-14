@@ -1229,7 +1229,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Fondo blanco */
+    background-color: white;
     z-index: 9999;
     display: flex;
     flex-direction: column;
@@ -1247,13 +1247,31 @@ body {
     visibility: hidden;
 }
 
-/* Estilos del logo en forma circular */
+/* Estilos del logo que cambiará de tamaño */
 .loading-logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%; /* Hace la imagen redonda */
     object-fit: cover; /* Asegura que la imagen se ajuste al contenedor redondo */
-    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 20px;
+    transition: width 0.5s, height 0.5s; /* Para animar el cambio de tamaño */
+}
+
+/* Estilos para la barra de progreso */
+.progress-bar-container {
+    width: 80%;
+    height: 10px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #3498db; /* Color de la barra */
+    transition: width 0.1s; /* Transición suave del ancho */
 }
 
 /* Animación para el texto "Cargando..." */
@@ -1261,5 +1279,4 @@ body {
     font-size: 24px;
     color: #555;
 }
-
 
