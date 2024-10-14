@@ -136,4 +136,11 @@ window.addEventListener('click', (e) => {
     }
 });
 
-
+// carga
+window.addEventListener("load", function() {
+    // Esperar un tiempo específico (ejemplo: 2 segundos)
+    setTimeout(function() {
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.classList.add("fade-out"); // Añadir clase para desaparecerlo
+    }, 2000); // 2000 milisegundos = 2 segundos
+});
