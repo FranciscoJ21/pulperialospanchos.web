@@ -138,9 +138,23 @@ window.addEventListener('click', (e) => {
 
 // carga
 window.addEventListener("load", function() {
-    // Esperar un tiempo específico (ejemplo: 2 segundos)
-    setTimeout(function() {
-        const loadingScreen = document.getElementById("loading-screen");
-        loadingScreen.classList.add("fade-out"); // Añadir clase para desaparecerlo
-    }, 2000); // 2000 milisegundos = 2 segundos
+    let progress = 0;
+    const progressBar = document.querySelector(".progress-bar");
+    const loadingLogo = document.querySelector(".loading-logo");
+    const loadingScreen = document.getElementById("loading-screen");
+
+    // Simular la carga en intervalos
+    const interval = setInterval(function() {
+        if (progress >= 100) {
+            clearInterval(interval); // Detener la barra de progreso cuando llegue al 100%
+            loadingScreen.classList.add("fade-out"); // Ocultar pantalla de carga
+        } else {
+            progress += 1; // Incrementar la barra de progreso
+            progressBar.style.width = progress + "%"; // Ajustar el ancho de la barra
+            loadingLogo.style.width = 100 + progress + "px"; // Aumentar el tamaño del logo
+            loadingLogo.style.height = 100 + progress + "px"; // Aumentar el tamaño del logo
+        }
+    }, 30); // Controlar la velocidad de la barra (30ms por paso, ajustable)
 });
+
+
