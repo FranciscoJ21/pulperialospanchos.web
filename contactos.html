@@ -9,145 +9,155 @@
 </head>
 <style>
     /* Estilo para centrar el formulario y darle estilo */
-/* Reset básico para asegurar un estilo consistente */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0; /* Fondo suave para la página */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ocupa toda la ventana */
-}
-
-/* Estilo para el contenedor del formulario */
-#wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    max-width: 450px;
-    width: 100%;
-    animation: fadeIn 1.2s ease-out;
-}
-
-/* Estilo para el formulario */
-form {
-    width: 100%;
-}
-
-/* Estilo para el título del formulario */
-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 24px;
-    animation: slideDown 0.8s ease-in-out;
-}
-
-/* Estilo para las etiquetas */
-form label {
-    display: block;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-    animation: fadeInUp 0.8s ease-in-out;
-}
-
-/* Estilo para los campos de texto y textarea */
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
-
-/* Enfocar el campo con un borde verde */
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
-    border-color: #3FB73F;
-    outline: none;
-    box-shadow: 0 0 6px rgba(63, 183, 63, 0.5);
-}
-
-/* Estilo para el botón */
-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #3FB73F;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-/* Animación al hacer hover sobre el botón */
-form button:hover {
-    background-color: #37A636;
-    transform: translateY(-3px);
-}
-
-/* Efecto clic en el botón */
-form button:active {
-    transform: translateY(0px);
-}
-
-/* Animaciones para la entrada del formulario */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+    /* Reset básico para asegurar un estilo consistente */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    100% {
-        opacity: 1;
-    }
-}
 
-@keyframes slideDown {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f0f0; /* Fondo suave para la página */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Ocupa toda la ventana */
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
-@keyframes fadeInUp {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
+    /* Estilo para el contenedor del formulario */
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        max-width: 450px;
+        width: 100%;
+        animation: fadeIn 1.2s ease-out;
     }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
 
+    /* Estilo para el formulario */
+    form {
+        width: 100%;
+    }
+
+    /* Estilo para el título del formulario */
+    form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 24px;
+        animation: slideDown 0.8s ease-in-out;
+    }
+
+    /* Estilo para las etiquetas */
+    form label {
+        display: block;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5px;
+        animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    /* Estilo para los campos de texto y textarea */
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+    }
+
+    /* Enfocar el campo con un borde verde */
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus {
+        border-color: #3FB73F;
+        outline: none;
+        box-shadow: 0 0 6px rgba(63, 183, 63, 0.5);
+    }
+
+    /* Estilo para el botón */
+    form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #3FB73F;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Animación al hacer hover sobre el botón */
+    form button:hover {
+        background-color: #37A636;
+        transform: translateY(-3px);
+    }
+
+    /* Efecto clic en el botón */
+    form button:active {
+        transform: translateY(0px);
+    }
+
+    /* Estilos del mensaje de éxito */
+    #success-message {
+        display: none;
+        margin-top: 20px;
+        text-align: center;
+        background-color: #3FB73F;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    /* Animaciones para la entrada del formulario */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
 </style>
 <body>
 
-    <div id ="wrapper">
-        <form action="https://formsubmit.co/franciscojvillanueva21@gmail.com " method="POST" />
+    <div id="wrapper">
+        <form action="https://formsubmit.co/franciscojvillanueva21@gmail.com" method="POST">
             <h2>Envía tu formulario</h2>
-            
+
             <label for="name">Nombre</label>
             <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
@@ -164,9 +174,41 @@ form button:active {
             <input type="hidden" name="_captcha" value="false">
 
             <button type="submit">Enviar</button>
-
         </form>
+
+        <!-- Mensaje de éxito -->
+        <div id="success-message">
+            ¡Tu mensaje ha sido enviado con éxito!
+        </div>
     </div>
+
+    <script>
+        // Capturamos el formulario y el mensaje de éxito
+        const form = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        // Añadimos un event listener al formulario
+        form.addEventListener('submit', function(event) {
+            // Evitar el comportamiento predeterminado de recargar la página
+            event.preventDefault();
+
+            // Realiza el envío del formulario de forma asíncrona
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+            })
+            .then(response => response.ok)
+            .then(success => {
+                if (success) {
+                    // Mostrar el mensaje de éxito
+                    successMessage.style.display = 'block';
+                    // Limpiar los campos del formulario
+                    form.reset();
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
 
 </body>
 </html>
